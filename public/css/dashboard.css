@@ -1,0 +1,61 @@
+/* CSS for Dashboard layout */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 20px;
+  }
+  
+  .sidebar h2 {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+  }
+  
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #ccc;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+
+  .card-icon {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+  }
+  
+  .card-subtext {
+    color: #6c757d;
+    font-size: 14px;
+  }
+
+  /* CSS for Dashboard layout */
+  
+  @media (max-width: 767.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  
+  
+  
