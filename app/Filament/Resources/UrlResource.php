@@ -30,6 +30,8 @@ class UrlResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('short_url')
                     ->required(),
+                Forms\Components\Select::make('category_id') 
+                    ->required()
             ]);
     }
 

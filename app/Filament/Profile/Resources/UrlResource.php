@@ -27,10 +27,18 @@ class UrlResource extends Resource
                 Forms\Components\TextInput::make('url')
                     ->required()
                     ->url(),
+                Forms\Components\Select::make('category_id')
+                    ->label('Kategori')
+                    ->options([
+                        '1' => 'Tokopedia',
+                        '2' => 'Shopee',
+                        '3' => 'Bukalapak',
+                        // Tambahkan opsi lain sesuai kebutuhan
+                    ])
+                    ->required(),
             ])
             ->columns(1);
     }
-
     public static function table(Table $table): Table
     {
         return $table
@@ -44,6 +52,18 @@ class UrlResource extends Resource
                     ->copyableState(fn (string $state): string => env('APP_URL', 'http://localhost:8000') . '/' . $state)
                     ->prefix(env('APP_URL', 'http://localhost:8000') . '/')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('category_id')
+                    ->label('Kategori')
+                    ->sortable()
+                    ->getStateUsing(function ($record, $column) {
+                        $categories = [
+                            '1' => 'Tokopedia',
+                            '2' => 'Shopee',
+                            '3' => 'Bukalapak',
+                            // Tambahkan opsi lain sesuai kebutuhan
+                        ];
+                        return $categories[$record->category_id] ?? 'Kategori Tidak Dikenal';
+                    }),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
