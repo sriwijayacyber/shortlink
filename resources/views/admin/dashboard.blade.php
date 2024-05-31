@@ -21,7 +21,7 @@
       <div class="col-md-6 col-lg-3 mb-4">
         <div class="card text-center h-100">
           <div class="card-body">
-            <div class="card-icon bg-primary text-white mb-2">
+            <div class="card-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mb-2 mx-auto" style="width: 50px; height: 50px;">
               <i class="fas fa-briefcase"></i>
             </div>
             <h5 class="card-title">Link Active</h5>
@@ -33,7 +33,7 @@
       <div class="col-md-6 col-lg-3 mb-4">
         <div class="card text-center h-100">
           <div class="card-body">
-            <div class="card-icon bg-primary text-white mb-2">
+            <div class="card-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mb-2 mx-auto" style="width: 50px; height: 50px;">
               <i class="fas fa-list"></i>
             </div>
             <h5 class="card-title">Saldo</h5>
